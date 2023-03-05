@@ -4,20 +4,23 @@
  */
 
 function display_advertisement($content) {
-    $advertisements = get_option('advertisement_list');
+    if ( is_singular( 'post' )) {
+        $advertisements = get_option('advertisement_list');
 
-    if (!$advertisements || !is_array($advertisements) || empty($advertisements)) {
-        return $content;
+        if (!$advertisements || !is_array($advertisements) || empty($advertisements)) {
+            return $content;
+        }
+
+        $random_key = array_rand($advertisements);
+        $advertisement = $advertisements[$random_key];
+
+        $advertisement_html = html_entity_decode($advertisement);
+
+        $output = '<div class="advertisement">' . $advertisement_html . '</div>';
+        $output .= $content;
+        return $output;
     }
-
-    $random_key = array_rand($advertisements);
-    $advertisement = $advertisements[$random_key];
-
-    $advertisement_html = html_entity_decode($advertisement);
-
-    $output = '<div class="advertisement">' . $advertisement_html . '</div>';
-    $output .= $content;
-    return $output;
+    return $content;
 }
 add_filter('the_content', 'display_advertisement');
 
@@ -30,7 +33,7 @@ function advertisement_options_page() {
         <?php
         
         if (isset($_POST['add_advertisement'])) {
-            $advertisement = sanitize_text_field($_POST['advertisement']);
+            $advertisement = $_POST['advertisement'];
             add_advertisement($advertisement);
         }
 
@@ -41,14 +44,14 @@ function advertisement_options_page() {
 
         ?>
         
-        <h2>Add Advertisement</h2>
+        <h3>Add Advertisement</h3>
         <form method="post" action="">
             <label for="advertisement">Advertisement:</label>
             <textarea name="advertisement" id="advertisement"></textarea>
             <button type="submit" name="add_advertisement" class="button">Add</button>
         </form>
         
-        <h2>Current Advertisements</h2>
+        <h3>Current Advertisements</h3>
         <table class="widefat">
             <thead>
                 <tr>
@@ -112,4 +115,8 @@ function advertisement_options() {
 
 
 add_action('admin_menu', 'advertisement_options');
-?>
+function advertisement_register_styles(){
+    wp_register_style('advertisement_styles', plugins_url('/css/style.css', __FILE__));
+    wp_enqueue_style('advertisement_styles');
+}
+add_action('init', 'advertisement_register_styles'); 
