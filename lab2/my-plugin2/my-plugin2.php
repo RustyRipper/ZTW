@@ -112,7 +112,6 @@ function delete_advertisement($id) {
 
 function advertisement_options() {
     add_options_page('Advertisement Options', 'Advertisement Options', 'manage_options', 'advertisement_options', 'advertisement_options_page');
-    register_setting('advertisement_options_group', 'advertisement_list');
 }
 
 add_action('admin_menu', 'advertisement_options');
