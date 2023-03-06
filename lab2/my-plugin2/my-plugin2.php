@@ -22,6 +22,7 @@ function display_advertisement($content) {
     }
     return $content;
 }
+
 add_filter('the_content', 'display_advertisement');
 
 
@@ -91,6 +92,7 @@ function advertisement_options_page() {
     </div>
     <?php
 }
+
 function add_advertisement($advertisement) {
     $advertisements = get_option('advertisement_list');
     $id = count($advertisements) + 1;
@@ -113,10 +115,40 @@ function advertisement_options() {
     register_setting('advertisement_options_group', 'advertisement_list');
 }
 
-
 add_action('admin_menu', 'advertisement_options');
+
+
+//Styles
 function advertisement_register_styles(){
     wp_register_style('advertisement_styles', plugins_url('/css/style.css', __FILE__));
     wp_enqueue_style('advertisement_styles');
 }
-add_action('init', 'advertisement_register_styles'); 
+
+add_action('init', 'advertisement_register_styles');
+
+
+//Additional
+function display_cat_fact() {
+    $api_url = 'https://catfact.ninja/fact';
+    $response = wp_remote_get( $api_url );
+
+    if ( is_wp_error( $response ) ) {
+        return 'Error getting cat fact.';
+    }
+
+    $body = wp_remote_retrieve_body( $response );
+    $data = json_decode( $body );
+
+    if ( ! empty( $data->fact ) ) {
+        return '<p>' . esc_html( $data->fact ) . '</p>';
+    } else {
+        return 'No found.';
+    }
+}
+
+function cat_fact_shortcode() {
+    $cat_fact = display_cat_fact();
+    return $cat_fact;
+}
+
+add_shortcode( 'cat_fact', 'cat_fact_shortcode' );
