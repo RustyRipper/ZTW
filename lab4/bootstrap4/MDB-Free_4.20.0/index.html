@@ -18,6 +18,13 @@
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!--WOW -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" integrity="sha512-dbb6Zk8XeWczjvI3Mq3oFXQy8InIgmud+1c57zVDnbtRkZWSXKjx6BZ5p5/5aR+hy83t+c0eA7knqDg+vp2N/g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-ff9Qq3kgxEtgn5BjqLQRJtFCR+5w5Bul4JuxV7n1wkC9u/WUR+P2h2uox7hzY4Wj1Vw4DPRztzjZ+hLYSyJW8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js" integrity="sha512-D2UArw5ziA0Kd6K5aWAKY46FvAz64miKszgjq16KjW//nn8RyOupxhczKpFzw1rZq3OZrH6j2QdZPNM5Qmyb5w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-k7i3ZatQKmPYmmnvG3q4s7tBwpe2Bx7V4L9XuS7OgIeMUDs7ssGevSl8kJgMKy0GSozEnAT7VRxlhq+xXWY0ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 </head>
 <body>
 
@@ -107,7 +114,7 @@
     <main class="mt-5">
         <div class="container">
             <!--Section: LastTravels-->
-            <section id="lastTravels" class="text-center">
+            <section id="lastTravels" class="text-center wow slideInLeft" data-wow-duration="1s">
                 <!--Grid row-->
                 <div class="row">
                     <!--Grid column-->
@@ -212,13 +219,18 @@
             <!--Section: LastTravels-->
 
             <!--quote-->
-            <section class="vh-100">
+            <section class="vh-100 wow slideInRight">
                 <div class="container py-5 h-100">
                     <div class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col col-lg-10 col-xl-8">
 
                             <div class="card rounded-3">
-                                <div class="card-body p-5">
+                                <div class="card-body p-5"
+
+                                     data-mdb-toggle="animation"
+                                     data-mdb-animation="slide-in-left"
+                                     data-mdb-animation-start="onScroll"
+                                     data-mdb-animation-on-scroll="repeat">
 
                                     <div class="d-flex justify-content-center mb-4">
                                         <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(28).webp"
@@ -243,17 +255,20 @@
             <!--quote-->
 
             <!--Google map-->
-            <h3>Tutaj znajdziesz nasze biuro</h3>
-            <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20039.444934961575!2d17.030891881683452!3d51.10974029257825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe82a7836289b%3A0xb8f93f04c5c8d70f!2sWroc%C5%82aw%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2spl!4v1679217946977!5m2!1sen!2spl"
-                        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <section class="wow slideInLeft" data-wow-duration="1s">
+
+                <h3>Tutaj znajdziesz nasze biuro</h3>
+                <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20039.444934961575!2d17.030891881683452!3d51.10974029257825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe82a7836289b%3A0xb8f93f04c5c8d70f!2sWroc%C5%82aw%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2spl!4v1679217946977!5m2!1sen!2spl"
+                            width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
             <!--Google Maps-->
 
             <hr class="my-5">
             <!--Section: Gallery-->
-            <section id="gallery">
+            <section id="gallery" class="wow slideInRight" data-wow-duration="1s">
                 <div class="row">
                     <div class="flag-column col-md-4">
                         <img src="img/3.png" alt="" class="flag img-fluid">
@@ -326,10 +341,7 @@
 
             <!--Wykres-->
             <section
-                    data-mdb-toggle="animation"
-                    data-mdb-animation="slide-in-left"
-                    data-mdb-animation-start="onScroll"
-                    data-mdb-animation-on-scroll="repeat">
+                    class="wow slideInUp" data-wow-duration="2s">
                 <h2 style="text-align: center">Najpopularniejsze kierunki podróży w Europie</h2>
                 <p style="text-align: center">W Europie istnieje wiele pięknych miejsc, które przyciągają turystów z
                     całego świata. Oto wykres
@@ -346,9 +358,10 @@
             <!--Wykres-->
             <!--Carousel-->
             <br><br><br>
-            <h2>Nasz zespół</h2>
+
             <br><br><br>
-            <section id="employees-carousel" class="container-fluid">
+            <section id="employees-carousel" class="container-fluid wow slideInUp" data-wow-duration="2s">
+                <h2>Nasz zespół</h2>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -435,62 +448,66 @@
             <!--Carousel-->
             <!--Section FAQ-->
             <br><br><br>
-            <h3 style="text-align: center">FAQ</h3>
-            <div class="accordion" id="accordionExample">
-                <!-- Pytanie 1 -->
-                <div class="card">
-                    <div class="card-header btn" id="headingOne" data-toggle="collapse"
-                         data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
-                    >
-                        <h5 class="mb-0">
-                            Jak mogę zarezerwować wakacje przez internet?
-                        </h5>
-                    </div>
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                         data-parent="#accordionExample">
-                        <div class="card-body">
-                            Aby zarezerwować wakacje przez internet, należy znaleźć odpowiednią stronę internetową
-                            oferującą takie usługi, wybrać interesujący nas kierunek i daty podróży, a następnie dokonać
-                            rezerwacji poprzez wypełnienie formularza i dokonanie płatności.
+            <section class="wow slideInUp" data-wow-duration="2s">
+                <h3 style="text-align: center">FAQ</h3>
+                <div class="accordion" id="accordionExample">
+                    <!-- Pytanie 1 -->
+                    <div class="card">
+                        <div class="card-header btn" id="headingOne" data-toggle="collapse"
+                             data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                        >
+                            <h5 class="mb-0">
+                                Jak mogę zarezerwować wakacje przez internet?
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                Aby zarezerwować wakacje przez internet, należy znaleźć odpowiednią stronę internetową
+                                oferującą takie usługi, wybrać interesujący nas kierunek i daty podróży, a następnie dokonać
+                                rezerwacji poprzez wypełnienie formularza i dokonanie płatności.
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Pytanie 2 -->
-                <div class="card">
-                    <div class="card-header btn" id="headingTwo" data-toggle="collapse"
-                         data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <h5 class="mb-0">
-                            Jakie dokumenty potrzebne są do podróży za granicę?
-                        </h5>
+                    <!-- Pytanie 2 -->
+                    <div class="card">
+                        <div class="card-header btn" id="headingTwo" data-toggle="collapse"
+                             data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h5 class="mb-0">
+                                Jakie dokumenty potrzebne są do podróży za granicę?
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                Dokładne wymagania dotyczące dokumentów różnią się w zależności od kraju, do którego się
+                                udajemy oraz naszego obywatelstwa. W przypadku podróży za granicę warto sprawdzić informacje
+                                na stronie internetowej ambasady danego kraju oraz skontaktować się z biurem podróży lub
+                                liniami lotniczymi, aby upewnić się co do wymaganych dokumentów.
+                            </div>
+                        </div>
                     </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                         data-parent="#accordionExample">
-                        <div class="card-body">
-                            Dokładne wymagania dotyczące dokumentów różnią się w zależności od kraju, do którego się
-                            udajemy oraz naszego obywatelstwa. W przypadku podróży za granicę warto sprawdzić informacje
-                            na stronie internetowej ambasady danego kraju oraz skontaktować się z biurem podróży lub
-                            liniami lotniczymi, aby upewnić się co do wymaganych dokumentów.
+
+                    <!-- Pytanie 3 -->
+                    <div class="card">
+                        <div class="card-header btn" id="headingThree" data-toggle="collapse"
+                             data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            <h5 class="mb-0">
+                                Jakie są najpopularniejsze kierunki turystyczne w Europie?
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                W Europie najczęściej odwiedzane kraje to Hiszpania, Francja, Włochy, Niemcy oraz Wielka
+                                Brytania. Popularne kierunki turystyczne to m.in. Paryż, Barcelona, Rzym, Berlin czy Londyn.
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Pytanie 3 -->
-                <div class="card">
-                    <div class="card-header btn" id="headingThree" data-toggle="collapse"
-                         data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                        <h5 class="mb-0">
-                            Jakie są najpopularniejsze kierunki turystyczne w Europie?
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                         data-parent="#accordionExample">
-                        <div class="card-body">
-                            W Europie najczęściej odwiedzane kraje to Hiszpania, Francja, Włochy, Niemcy oraz Wielka
-                            Brytania. Popularne kierunki turystyczne to m.in. Paryż, Barcelona, Rzym, Berlin czy Londyn.
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
+
             <!--Section FAQ-->
             <br><br><br>
             <!--Section: Contact-->
@@ -574,6 +591,10 @@
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.2/dist/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 <script>
     var ctx = document.getElementById('popular-country').getContext('2d');
     var chart = new Chart(ctx, {
