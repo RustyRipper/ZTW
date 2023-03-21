@@ -19,10 +19,18 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!--WOW -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" integrity="sha512-dbb6Zk8XeWczjvI3Mq3oFXQy8InIgmud+1c57zVDnbtRkZWSXKjx6BZ5p5/5aR+hy83t+c0eA7knqDg+vp2N/g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-ff9Qq3kgxEtgn5BjqLQRJtFCR+5w5Bul4JuxV7n1wkC9u/WUR+P2h2uox7hzY4Wj1Vw4DPRztzjZ+hLYSyJW8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js" integrity="sha512-D2UArw5ziA0Kd6K5aWAKY46FvAz64miKszgjq16KjW//nn8RyOupxhczKpFzw1rZq3OZrH6j2QdZPNM5Qmyb5w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-k7i3ZatQKmPYmmnvG3q4s7tBwpe2Bx7V4L9XuS7OgIeMUDs7ssGevSl8kJgMKy0GSozEnAT7VRxlhq+xXWY0ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+          integrity="sha512-dbb6Zk8XeWczjvI3Mq3oFXQy8InIgmud+1c57zVDnbtRkZWSXKjx6BZ5p5/5aR+hy83t+c0eA7knqDg+vp2N/g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          integrity="sha512-ff9Qq3kgxEtgn5BjqLQRJtFCR+5w5Bul4JuxV7n1wkC9u/WUR+P2h2uox7hzY4Wj1Vw4DPRztzjZ+hLYSyJW8A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+            integrity="sha512-D2UArw5ziA0Kd6K5aWAKY46FvAz64miKszgjq16KjW//nn8RyOupxhczKpFzw1rZq3OZrH6j2QdZPNM5Qmyb5w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+            integrity="sha512-k7i3ZatQKmPYmmnvG3q4s7tBwpe2Bx7V4L9XuS7OgIeMUDs7ssGevSl8kJgMKy0GSozEnAT7VRxlhq+xXWY0ZQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 </head>
@@ -32,55 +40,48 @@
 <!--Main Navigation-->
 <header>
     <!--Navbar-->
+
     <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
         <div class="container">
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="#">Navbar</a>
-            <!-- Collapse button -->
-            <button class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    datatarget="#basicExampleNav"
-                    aria-controls="basicExampleNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">Podroze</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="basicExampleNav">
-                <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
+                        <a class="nav-link" href="#intro">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#employees-carousel">Carousel</a>
                     </li>
-                    <!-- Dropdown -->
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                           aria-haspopup="true"
-                           aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown show">
+                            <a class=" nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Others
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#quote">Quote</a>
+                                <a class="dropdown-item" href="#faq">FAQ</a>
+                                <a class="dropdown-item" href="#stats">Stats</a>
+                            </div>
                         </div>
                     </li>
                 </ul>
-                <!-- Links -->
                 <form class="form-inline">
                     <div class="md-form my-0">
                         <input class="form-control mr-sm2" type="text" placeholder="Search" aria-label="Search">
                     </div>
                 </form>
             </div>
-            <!-- Collapsible content -->
         </div>
     </nav>
     <!--/.Navbar-->
@@ -219,7 +220,7 @@
             <!--Section: LastTravels-->
 
             <!--quote-->
-            <section class="vh-100 wow slideInRight">
+            <section id="quote" class="vh-100 wow slideInRight">
                 <div class="container py-5 h-100">
                     <div class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col col-lg-10 col-xl-8">
@@ -341,6 +342,7 @@
 
             <!--Wykres-->
             <section
+                    id="stats"
                     class="wow slideInUp" data-wow-duration="2s">
                 <h2 style="text-align: center">Najpopularniejsze kierunki podróży w Europie</h2>
                 <p style="text-align: center">W Europie istnieje wiele pięknych miejsc, które przyciągają turystów z
@@ -370,7 +372,6 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
-                                <!-- Kontrolki Cards z wyświetlającymi pracowników -->
                                 <div class="col-md-4 mb-4">
                                     <div class="card">
                                         <img class="card-img-top" src="img/a2.png" alt="">
@@ -448,7 +449,7 @@
             <!--Carousel-->
             <!--Section FAQ-->
             <br><br><br>
-            <section class="wow slideInUp" data-wow-duration="2s">
+            <section id="faq" class="wow slideInUp" data-wow-duration="2s">
                 <h3 style="text-align: center">FAQ</h3>
                 <div class="accordion" id="accordionExample">
                     <!-- Pytanie 1 -->
@@ -464,7 +465,8 @@
                              data-parent="#accordionExample">
                             <div class="card-body">
                                 Aby zarezerwować wakacje przez internet, należy znaleźć odpowiednią stronę internetową
-                                oferującą takie usługi, wybrać interesujący nas kierunek i daty podróży, a następnie dokonać
+                                oferującą takie usługi, wybrać interesujący nas kierunek i daty podróży, a następnie
+                                dokonać
                                 rezerwacji poprzez wypełnienie formularza i dokonanie płatności.
                             </div>
                         </div>
@@ -481,7 +483,8 @@
                              data-parent="#accordionExample">
                             <div class="card-body">
                                 Dokładne wymagania dotyczące dokumentów różnią się w zależności od kraju, do którego się
-                                udajemy oraz naszego obywatelstwa. W przypadku podróży za granicę warto sprawdzić informacje
+                                udajemy oraz naszego obywatelstwa. W przypadku podróży za granicę warto sprawdzić
+                                informacje
                                 na stronie internetowej ambasady danego kraju oraz skontaktować się z biurem podróży lub
                                 liniami lotniczymi, aby upewnić się co do wymaganych dokumentów.
                             </div>
@@ -500,7 +503,8 @@
                              data-parent="#accordionExample">
                             <div class="card-body">
                                 W Europie najczęściej odwiedzane kraje to Hiszpania, Francja, Włochy, Niemcy oraz Wielka
-                                Brytania. Popularne kierunki turystyczne to m.in. Paryż, Barcelona, Rzym, Berlin czy Londyn.
+                                Brytania. Popularne kierunki turystyczne to m.in. Paryż, Barcelona, Rzym, Berlin czy
+                                Londyn.
                             </div>
                         </div>
                     </div>
@@ -511,7 +515,7 @@
             <!--Section FAQ-->
             <br><br><br>
             <!--Section: Contact-->
-            <section id="contact" >
+            <section id="contact">
                 <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                      aria-hidden="true">
                     <div class="modal-dialog" role="document">
